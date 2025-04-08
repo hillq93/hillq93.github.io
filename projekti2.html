@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kuva {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img id="kuva" src="kuvat/han.jpg">
+    <button onclick="seuraavaKuva()">seuraava kuva</button>
+    <button onclick="edellinenKuva()">edellinen kuva</button>
+</body>
+<script>
+    var kuvalista = [
+        "gd.jpg",
+        "han.jpg",
+        "perhonen.jpg"
+        ]
+        var kuvaelementti = document.getElementById("kuva")
+    
+        kuvaelementti.src = "kuvat/" + kuvalista[0]
+        var kuvaNumero = 0
+
+        function seuraavaKuva() {
+        kuvaNumero = kuvaNumero + 1
+        kuvaelementti.src ="kuvat/" + kuvalista[kuvaNumero]
+        }
+        function edellinenKuva() {
+            kuvaNumero = kuvaNumero - 1
+            kuvaelementti.src ="kuvat/" + kuvalista[kuvaNumero]
+        }
+
+
+</script>
+</html>
